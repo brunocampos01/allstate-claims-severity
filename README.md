@@ -1,5 +1,4 @@
-# Tags
-
+# Analysis in the Online Retail Data Set
 [![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
 ![License](https://img.shields.io/badge/Code%20License-MIT-blue.svg)
 
