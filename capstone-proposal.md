@@ -32,7 +32,8 @@ Atualmente, a Allstate está desenvolvendo métodos automatizados para prever o 
  - Número de linhas = 188318
  - Número de colunas = 132
  - Altamente relevante, pois são os dados sobre os quais vamos treinar.
-<br/>
+
+
 3. Em test.csv:
  - Número de linhas = 125546
  - Número de colunas = 131
