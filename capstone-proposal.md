@@ -70,6 +70,6 @@ Seŕa testado e executado os modelos de regressão linear, XGBoost e Random Fore
 
 [1] Kaggle, ”Allstate Claims Severity” (2016). https://www.kaggle.com/c/allstate-claims-severity, acessado em 18/12/2018.
 
-[2]machinelearningmastery, "Bagging and Random Forest Ensemble Algorithms for Machine Learning",(2016). https://machinelearningmastery.com/bagging-and-random-forest-ensemble-algorithms-for-machine-learning/, acesso em 10/12/2018.
+[2] Machinelearningmastery, "Bagging and Random Forest Ensemble Algorithms for Machine Learning",(2016). https://machinelearningmastery.com/bagging-and-random-forest-ensemble-algorithms-for-machine-learning/, acesso em 10/12/2018.
 
 [3] aws, "Algoritmo XGBoost"(2018). https://docs.aws.amazon.com/pt_br/sagemaker/latest/dg/xgboost.html, acesso em 10/12/2018.
