@@ -11,9 +11,9 @@
  
   ## Pre Requirements	
  - Python 3.6 or more:<br/>	
- `sudo apt-get install python3.6`	
+ `sudo apt install python3.6`	
  - pip:<br/>	
- `sudo apt-get install python-pip`	
+ `sudo apt install python-pip`	
  - Libraries:<br/>	
  `pip install -r requirements.txt`<br/>	
  ## Quickstart	
