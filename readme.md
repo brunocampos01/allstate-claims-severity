@@ -5,26 +5,24 @@
   ## Describe project 	
  This project is my Capstone in course Udacity Machine Learning Engineer Nanodegree.<br/>	
  
-  - The objective is use supervised learning technical for understend how severe is an insurance claim.	
+ - The objective is use supervised learning technical for understend how severe is an insurance claim.	
  - The datasource is: https://www.kaggle.com/c/allstate-claims-severity/data	
  - Learn more proposal in: https://github.com/brunocampos01/allstate-claims-severity/blob/master/capstone-proposal.md	
  
   ## Pre Requirements	
- - Python 3.6 or more:<br/>	
+ - Python 3.7.1 or more:<br/>	
  `sudo apt install python3.6`	
  - pip:<br/>	
  `sudo apt install python-pip`	
  - Libraries:<br/>	
  `pip install -r requirements.txt`<br/>	
  ## Quickstart	
- 
+ https://github.com/brunocampos01/allstate-claims-severity/blob/master/allstate-corporation.ipynb
   ## Algoritms	
  - Linear Regression (linear)	
- - XGBoost	
- - Random Forest (Bagging) 	
+ - Random Forest Regressor 	
+ - XGBoost
  
-  
-  
   ## Author	
  - Bruno Aurélio Rôzza de Moura Campos (brunocampos01@gmail.com)	
  ## Copyright	
