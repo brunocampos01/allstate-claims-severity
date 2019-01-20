@@ -11,13 +11,15 @@
  
   ## Pre Requirements	
  - Python 3.7.1 or more:<br/>	
- `sudo apt install python3.6`	
+ `sudo apt install python3.7.1`	
  - pip:<br/>	
  `sudo apt install python-pip`	
  - Libraries:<br/>	
  `pip install -r requirements.txt`<br/>	
+ 
  ## Quickstart	
  https://github.com/brunocampos01/allstate-claims-severity/blob/master/allstate-corporation.ipynb
+ 
   ## Algoritms	
  - Linear Regression (linear)	
  - Random Forest Regressor 	
