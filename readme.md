@@ -11,7 +11,7 @@
  
   ## Pre Requirements	
  - Python 3.7.1 or more:<br/>	
- `sudo apt install python3.7.1`	
+ `sudo apt install python3.7`	
  - pip:<br/>	
  `sudo apt install python-pip`	
  - Libraries:<br/>	
