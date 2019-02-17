@@ -67,12 +67,16 @@ Ao analisar os dados fornecidos, observamos que que temos os seguites tipos de d
 - object(116) = features categóricas
 
 As imagens 1 e 2 são amostras dos dado de train e test.
+
 <img src="images/train_data.png" height="70%" width="60%"/>
+
 
 Imagem 1. Amostra do arquivo de train.csv
 
 
+
 <img src="images/test_data.png" height="70%" width="60%"/>
+
 Imagem 2. Amostra do arquivo de test.csv
 
 
@@ -130,9 +134,11 @@ Foi necessário aplicar várias técnicas de processamento para preparar os dado
 - Transformação da feature loss: Foi aplicado _log_ na feature loss para garantir uma distribuição mais gaussiana. Abaixo, há as imagens com as distribuições:<br/>
 
 <img src="images/default_loss.png" height="50%" width="60%"/>
+
 Imagem 3. Distribuição dos dados recebidos.
 
 <img src="images/log_loss.png" height="50%" width="60%"/>
+
 Imagem 4. Distribuição dos dados com aplicação logarítmica.
 
 
@@ -149,28 +155,39 @@ Depois disso, foi realizado um **_data preprocessing_** para fazer as seguintes 
 - Conversão de valores com _string_ para valores numéricos
 
 Na sequencia, se viu necessidade de realizar um **_feature engineer_** com os seguintes passos:
+
 - Analisar graficamente a _feture loss_
 
 <img src="images/default_loss.png" height="50%" width="60%"/>
+
 Imagem 5. Distribuição da _feature_ loss.
+
+
 
 - Analisar graficamente as _feature_ contínuas
 
 <img src="images/corr_cont_types_1_ate_4.png" height="50%" width="60%"/>
+
 Imagem 6. correlação das _features_ contínuas entre loss, 1 e 4.
 
 <img src="images/corr_cont_types_5_ate_8.png" height="50%" width="60%"/>
+
 Imagem 7. correlação das _features_ contínuas entre loss, 5 e 8.
 
 <img src="images/corr_cont_types_13_ate_14.png" height="50%" width="60%"/>
+
 Imagem 8. correlação das _features_ contínuas entre loss, 13 e 14.
 
 <img src="images/corr_cont_types_all.png" height="100%" width="100%"/>
+
 Imagem 9. correlação de todas as _features_ contínuas e loss.
+
+
 
 - Analisar a matriz de correlação das _feature_ contínuas
 
 <img src="images/corr_matrix_cont.png" height="100%" width="100%"/>
+
 Imagem 10. Distribuição dos dados recebidos.
 
 - Foi decido não analisar graficamente as _fetures_ categóricas pois havia muitas. Como mlehor sulução ainstao foi calculado e obtido uma lista com as 10 melhores correlações, conforme resultado abaixo:<br/>
@@ -311,7 +328,7 @@ Foi utilizado três modelos de machine learning:
 
 ## IV. Resultados
 
-### Modelo de avaliação e validação
+### 4.1 Modelo de avaliação e validação
 Para avaliar cada algoritmo de machine learning testado foi utilizado o erro absoluto médio (MAE) com a seguinte implemetação:<br/>
 ```
 # Custom eval metric
@@ -342,21 +359,18 @@ kf = KFold(n_splits = k, shuffle = True, random_state = random_state)
 ```
 
 
-### Justificativa
+### 4.2 Justificativa
 Após testar os três algoritmos, foi analisado qual obteve o menor erro absoluto médio. A conclusão que se chegou foi um MAE de 1753.6550894377651 para o XGBoost
 
 ## V. Conclusão
 
-### Foma livre de visualização
-
-
-### Reflexão
+### 5.1 Reflexão
  Durante todo o projeto foi documentato da melhor forma possível através de notebooks. Essencialmente, este projeto consistiu em uma comparação de modelos de regressão linear, random forest e xgboot para criar predições encima dos dados fornecidos.<br/>
  O projeto foi revisado para garantir a melhor qualidade possível. Foi seguido as orientações da Udacity para deixar o trabalho padronizado. <br/>
  A parte de visualização dos dados foi útil para tomar as decisões sobre as técnicas usadas. Todos os gráficos gerados foram salvos para poder utilizar neste documento e assim melhor explicar as suas importancias. <br/>
  Ao final do projeto foi possível criar previsões muito boas, graças a forma que os dados foram tratados. Isso facilitou muito a aplicação dos algoritmos de machine learning.
 
 
-### Melhorias
+### 5.2 Melhorias
 Uma possível melhoria para este caso de predição pode ser a utilização de redes neurais artificias trainadas para conseguir previsões mais refiandas e modelos mais potentes. Se houver a utilização de novas técnicas como redes neurais artificiais pode ser feito um comparativo com os modelos testados neste projeto.<br/>
 A solução final pode ser usada como refencia pois houve a utilização e justificativa de cada modelo encima dos dados fornecidos e obitdo o melhor resultado na comparação.<br/>
