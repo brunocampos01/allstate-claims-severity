@@ -7,10 +7,23 @@ Bruno Aurélio Rôzza de Moura Campos
 
 ## I. Definição
 ### 1.1 Visão geral do projeto
-Quando ocorre um acidente de carro, as pessoas mantem o foco em família, amigos e outros entes queridos. A parte burocrática de entrar em contato com um agente de seguros é o último lugar que alguem vai gastar esforços. Para minimizar esforços na utilização de um serviço de sinistro será feito uma análise preditiva e assim, garatir a menor perda de tempo possível ao usuário.
+Quando ocorre um acidente de carro, as pessoas mantem o foco em família, amigos e outros entes queridos. A parte burocrática de entrar em contato com um agente de seguros é o último lugar que alguem vai gastar esforços. Para minimizar esforços na utilização de um serviço de sinistro será feito uma análise preditiva e assim, garatir a menor perda de tempo possível ao usuário e fornecer assistência direcionada para melhor atender.<br/>
+
 
 ### 1.2 Descrição do problema
-O projeto será voltado a automatizar a previsão de custo e análise da gravidade de um sinistro. Como resultado, será possível garantir uma experiência mais eficiente aos clientes que necessitam. A seguradora que esta realizando o desafio, Allstate, forneceu os seguintes dados:
+Para este tipo de problema será explorado uma variedade de métodos de _machine learning_ para encontrar o melhor para prever o custo de reparo (ou perda) para uma determinada reivindicação de seguro.<br/>
+
+Há um artigo científico [Allstate Insurance Claims Severity: A Machine Learning Approach](https://pdfs.semanticscholar.org/e513/fcdb0cd06515858e42bd82d9dfab14c97b45.pdf) que aborda este mesmo problema e utiliza as seguintes técnicas de _machine learning_:
+- regressão linear
+- _Random Forest_
+- _Gradient Boosted Trees_
+- _Suport Vectorial Machine_
+
+Como conclusão do artigo, é visto que o _Gradient Boosted Trees_ apresenta a melhor performace em comparação aos outros modelos.
+
+Um problema muito similar já apareceu no kaggle, na competição [Porto Seguro’s Safe Driver Prediction
+](https://www.kaggle.com/c/porto-seguro-safe-driver-prediction) onde o objetivo era construir um modelo probabilistico para inferir uma reinvindicação para o uso do seguro. <br/>
+Este projeto tem bastante similaridade com a competição do Porto Seguro, então é possivel dizer que a resolução deste problema será voltado a automatizar a previsão de custo e análise da gravidade de um sinistro. Como resultado, será possível garantir uma experiência mais eficiente aos clientes que necessitam. A seguradora que esta realizando o desafio, Allstate, forneceu os seguintes dados:
 <br/>
 1. Variáveis em train.csv e test.csv:
  - **id**: o id de um par de perguntas do conjunto de treinamento
@@ -38,6 +51,9 @@ Há várias maneiras de avaliar este problema. Como a avaliação oficial deste 
 - _y_: valor True
 - _ŷ_: valor predito
 - n samples: número de exemplos estimados 
+
+
+
 
 ## II. Análise
 ### 2.1 Exploração dos dados
@@ -340,7 +356,7 @@ def eval_error(preds, dtrain):
 
 Foi feito um comparativo entre a perda prevista e a perda real para cada afirmação do conjunto de testes. Isso garantiu a escolha do algoritmo melhor performático dentre os testados.<br/>
 
-Já para validação dos dados foi utilizado _K-Folds Cross Validation_. O KFold divide todas as amostras em grupos de amostras, chamadas dobras de tamanhos iguais (se possível). A função de predição é aprendida usando dobras e a dobra deixada de fora é usada para teste. Foi implmentado da seguinte forma:<br/>
+Já para validação dos dados foi utilizado _K-Folds Cross Validation_. O KFold divide todas as amostras em grupos de amostras, chamadas dobras de tamanhos iguais (se possível). A função de predição é aprendida usando dobras e a dobra deixada de fora é usada para teste. Foi implementado da seguinte forma:<br/>
 
 ```
 # replicate the results
@@ -358,19 +374,146 @@ Ao testar o algoritmo de XGBoost houve a necessidade de alterar a implementaçã
 kf = KFold(n_splits = k, shuffle = True, random_state = random_state)
 ```
 
+Ao final do processo, quando o modelo iterar/treinar 5 vezes, é obtido um _score_ de como o modelo está generalizando. Tambem é possível notar que, esse processo faz com que o treino do modelo demore um pouco mais, mas é crucial para ter certeza de que o modelo esta generalizando bem.<br/>
+
+Ao utilizar a função de `train_model` é possivel garantir que o modelo irá generalizar bem e apresentar uma maior robustez para dados não visto.<br/>
+
+No desafio em questão foi notado pequenas alterações como resultado final conforme detalhado nos testes mais abaixo (seção 4.1.1). Cabe ressaltar a importancia da função  `train_model` para este projeto, o qual realiza o trainamento e validação  dos dados.
+
+#### 4.1.1 Resultado de cada modelo
+Abaixo segue os resultados do modelo de **regressão linear**: 
+- Neste primeiro resultado foi testado sem os dados normalizados.
+
+<img src="images/result/linear_regression-1.png"/>
+
+
+- Neste segundo caso foi testado com os dados normalizados:
+
+<img src="images/result/linear_regression-2.png"/>
+
+
+Abaixo segue os resultados do modelo de **random forest**: 
+- Neste caso foram usados os seguintes parâmetros:
+
+|Parâmetro       | Valor |
+|:-------:       |-------------:|
+|n_estimators    |20|
+|n_jobs          |-1|
+|verbose         |1|
+|max_depth       |30|
+
+<img src="images/result/random_forest-1.png"/>
+
+
+- Neste caso foram usados os seguintes parâmetros:
+
+|Parâmetro       | Valor |
+|:-------:       |-------------:|
+|n_estimators    |50|
+|n_jobs          |-1|
+|verbose         |1|
+|max_depth       |30|
+  
+<img src="images/result/random_forest-2.png"/>
+
+  
+- Neste caso foram usados os seguintes parâmetros:
+  
+|Parâmetro       | Valor |
+|:-------:       |-------------:|
+|n_estimators    |100|
+|n_jobs          |-1|
+|verbose         |1|
+|max_depth       |30|
+
+<img src="images/result/random_forest-3.png"/>
+
+
+Abaixo segue os resultados do modelo de **XGBoot Regressor**: 
+- Neste caso foram usados os seguintes parâmetros:
+
+|Parâmetro       | Valor |
+|:-------:       |-------------:|
+|learning_rate   |0.1|
+|n_estimators    |1000|
+|max_depth       |7|
+|min_child_weight|5|
+|gamma           |0|
+|subsample       |1|
+|colsample_bytree|1|
+|reg_alpha       |1|
+|silent          |True|
+|seed            |random_state|
+|nthread         |-1|
+
+<img src="images/result/xgboost-1.png"/>
+
+
+- Neste caso foram usados os seguintes parâmetros:
+
+|Parâmetro       | Valor |
+|:-------:       |-------------:|
+|learning_rate   |0.1|
+|n_estimators    |1000|
+|max_depth       |5|
+|min_child_weight|6|
+|gamma           |1|
+|subsample       |1|
+|colsample_bytree|1|
+|reg_alpha       |1|
+|silent          |True|
+|seed            |random_state|
+|nthread         |-1|
+
+<img src="images/result/xgboost-2.png"/>
+
+
+- Neste caso foram usados os seguintes parâmetros:
+
+|Parâmetro       | Valor |
+|:-------:       |-------------:|
+|learning_rate   |0.1|
+|n_estimators    |1000|
+|max_depth       |9|
+|min_child_weight|6|
+|gamma           |1|
+|subsample       |1|
+|colsample_bytree|0.5|
+|reg_alpha       |1|
+|silent          |True|
+|seed            |random_state|
+|nthread         |-1|
+
+<img src="images/result/xgboost-3.png"/>
+
 
 ### 4.2 Justificativa
-Após testar os três algoritmos, foi analisado qual obteve o menor erro absoluto médio. A conclusão que se chegou foi um MAE de 1753.6550894377651 para o XGBoost
+Após testar os três algoritmos, foi analisado qual obteve o menor erro absoluto médio. A conclusão que se chegou foi um MAE de 1753.6550894377651 para o XGBoost.
+<br/>
+Em relação ao modelo de referência escolhido, que é a melhor pontuação da competição para o conjunto de teste,  aparece com MAE de 1109.70772 com isso é possível avaliar que cabe melhorias futuras nas modelagem deste projeto.
 
 ## V. Conclusão
 
-### 5.1 Reflexão
+### 5.1 Forma livre de visualização
+Como foi verificado na seção anterior, os resultados foram muito bons. Na tabela abaixo segue a classificação quanto ao erro absoluto médio com cada respectivo modelo e o tempo de processamento (por dobra - _elapsed_ ) considerando o pior caso:
+
+|Modelo       | MAE | Tempo de processamento (seg)|
+|:-------:       |-------------:|-------------:|
+|random forest       |1854.7|29.8|
+|regressão linear    |1791.1|0.5|
+|xgboost             |1753.6|8.5|
+
+É possível notar que foi obtido um melhor resultado quando se utilizou mais processamento, no caso do modelo de _xgboot_.<br/>
+
+O que foi bem surpreendente e inesperado é o resultado da _random forest_. Inicialmente foi visto como um bom modelo para este problema, pois utilizam o _bagging_ de recursos de tal forma que cada _forest_ considera um subconjunto escolhido aleatoriamente dos dados disponíveis e ainda as saídas de cada uma das florestas são calculadas, resultando em uma saída suavizada que permite que a variância seja minimizada. Porém nos testes obteve um resultado pior que o modelo de regressão linear.
+
+### 5.2 Reflexão
  Durante todo o projeto foi documentato da melhor forma possível através de notebooks. Essencialmente, este projeto consistiu em uma comparação de modelos de regressão linear, random forest e xgboot para criar predições encima dos dados fornecidos.<br/>
  O projeto foi revisado para garantir a melhor qualidade possível. Foi seguido as orientações da Udacity para deixar o trabalho padronizado. <br/>
  A parte de visualização dos dados foi útil para tomar as decisões sobre as técnicas usadas. Todos os gráficos gerados foram salvos para poder utilizar neste documento e assim melhor explicar as suas importancias. <br/>
  Ao final do projeto foi possível criar previsões muito boas, graças a forma que os dados foram tratados. Isso facilitou muito a aplicação dos algoritmos de machine learning.
 
 
-### 5.2 Melhorias
+### 5.3 Melhorias
 Uma possível melhoria para este caso de predição pode ser a utilização de redes neurais artificias trainadas para conseguir previsões mais refiandas e modelos mais potentes. Se houver a utilização de novas técnicas como redes neurais artificiais pode ser feito um comparativo com os modelos testados neste projeto.<br/>
 A solução final pode ser usada como refencia pois houve a utilização e justificativa de cada modelo encima dos dados fornecidos e obitdo o melhor resultado na comparação.<br/>
