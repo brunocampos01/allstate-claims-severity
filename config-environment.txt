@@ -1,4 +1,0 @@
-/home/campos/anaconda3/bin/python
-pip 9.0.1 from /home/campos/anaconda3/lib/python3.6/site-packages (python 3.6)
-conda 4.3.30
-/home/campos/anaconda3/bin/conda
