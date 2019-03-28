@@ -21,7 +21,7 @@
 https://github.com/brunocampos01/allstate-claims-severity/blob/master/notebooks/allstate_corporation-casptone_nanodegreed.ipynb
 
   ## Algoritms	
- - Linear Regression (linear)	
+ - Linear Regression
  - Random Forest Regressor 	
  - XGBoost
  
