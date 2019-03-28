@@ -7,10 +7,10 @@ Release:	18.04
 Codename:	bionic
 
 Pip Version:
-pip 19.0.2 from /home/campos/anaconda3/lib/python3.6/site-packages/pip (python 3.6)
+pip 10.0.1 from /home/campos/anaconda3/lib/python3.6/site-packages/pip (python 3.6)
 
 Conda Version:
-conda 4.3.30
+conda 4.6.8
 
 Jupyter Version:
-4.3.0
+4.4.0
