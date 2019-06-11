@@ -9,7 +9,7 @@
  - The datasource is: https://www.kaggle.com/c/allstate-claims-severity/data	
  - Learn more proposal in: https://github.com/brunocampos01/allstate-claims-severity/tree/master/reports	
  
-  ## Pre Requirements	
+  ## Requirements	
  - Python 3.7.1 or more:<br/>	
  `sudo apt install python3.7`	
  - pip:<br/>	
