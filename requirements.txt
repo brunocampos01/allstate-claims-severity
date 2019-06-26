@@ -1,8 +1,0 @@
-seaborn==0.8.1
-numpy==1.14.3
-pandas==0.23.0
-matplotlib==2.2.2
-xgboost==0.82
-ipython==7.4.0
-scikit_learn==0.20.3
-atlas==0.27.0
