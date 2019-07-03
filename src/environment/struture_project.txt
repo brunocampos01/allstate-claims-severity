@@ -1,13 +1,20 @@
 .
 ├── data
+│   ├── cleansing
+│   │   ├── test.csv
+│   │   └── train.csv
 │   ├── raw
 │   │   ├── sample_submission.csv
 │   │   ├── test.csv
 │   │   └── train.csv
 │   └── submissions-kaggle
+│       ├── lin_regression_submission.csv
+│       ├── random_forest_submission.csv
+│       └── xgb_submission.csv
 ├── LICENSE
 ├── notebooks
-│   └── allstate_corporation-casptone_nanodegreed.ipynb
+│   ├── algoritm-selection-and-tranning-model.ipynb
+│   └── data-exploration-and-data-cleaning.ipynb
 ├── README.md
 ├── references
 │   └── images
@@ -41,7 +48,6 @@
 │   ├── machine-learning-capstone.md.ipynb
 │   ├── proposta.pdf
 │   └── relatorio_machine-learning-capstone.pdf
-├── requirements.txt
 └── src
     ├── environment
     │   ├── config_environment.txt
@@ -51,12 +57,15 @@
     │   ├── makefile
     │   ├── prepare_env.py
     │   ├── README.md
+    │   ├── requirements.txt
     │   ├── show_config_environment.sh
     │   ├── show_struture_project.sh
     │   ├── struture_project.txt
     │   ├── test_environment.py
     │   └── virtualenv_requirements.txt
     ├── __init__.py
-    └── notebook_config.ini
+    └── visualization
+        ├── hidden_code.js
+        └── visuals.py
 
-10 directories, 49 files
+12 directories, 56 files
