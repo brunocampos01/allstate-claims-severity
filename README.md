@@ -136,7 +136,7 @@ cd challenge-keyrus
  - [virtual environment](src/environment/README.md)
  - [container](src/environment/README.md)
 
-3. In terminal running command `jupyter-notebook` and navigate in this repository: `challenge-keyrus/notebooks`
+3. In terminal running command `jupyter-notebook` and navigate in this repository: `notebooks`
 
 ##### NOTES
 - All the development was done using **virtualenv**. 
