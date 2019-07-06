@@ -1,155 +1,146 @@
 # Capstone Proposal - Allstate Claims Severity
-[![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)
-![License](https://img.shields.io/badge/Code%20License-MIT-blue.svg)
+![Python 3.6](https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue.svg)
+![License](https://img.shields.io/badge/Code%20License-MIT-green.svg)
 
 ## Describe project
  This project is my Capstone in course Udacity Machine Learning Engineer Nanodegree.
 
- - The objective is use supervised learning technical for understend how severe is an insurance claim.
- - The datasource is: https://www.kaggle.com/c/allstate-claims-severity/data
- - Learn more proposal in: https://github.com/brunocampos01/allstate-claims-severity/tree/master/reports
+## Objective
+The objective is use supervised learning technical for understend how severe is an insurance claim.
 
-## Quickstart
-1. [Data Cleaning](https://github.com/brunocampos01/allstate-claims-severity/blob/master/notebooks/allstate_corporation-casptone_nanodegreed.ipynb
-)
-2. [Data Exploration](https://github.com/brunocampos01/allstate-claims-severity/blob/master/notebooks/allstate_corporation-casptone_nanodegreed.ipynb
-)
-3. [Feature Engineering](https://github.com/brunocampos01/allstate-claims-severity/blob/master/notebooks/allstate_corporation-casptone_nanodegreed.ipynb
-)
-4. [Model Selection](https://github.com/brunocampos01/allstate-claims-severity/blob/master/notebooks/allstate_corporation-casptone_nanodegreed.ipynb
-)
+## Documenatation
+- [Capstone proposal](reports/)
+- [Report this project](reports/)
 
-## Struture this Project
-```
-.
-├── corr_cont_types_13_ate_14.png
-├── data
-│   ├── raw
-│   │   ├── sample_submission.csv
-│   │   ├── test.csv
-│   │   └── train.csv
-│   └── submissions-kaggle
-├── LICENSE
-├── notebooks
-│   └── allstate_corporation-casptone_nanodegreed.ipynb
-├── README.md
-├── references
-│   └── images
-│       └── allstate.jpg
-├── reports
-│   ├── capstone-proposal.md
-│   ├── images
-│   │   ├── corr_cont_types_13_ate_14.png
-│   │   ├── corr_cont_types_1_ate_4.png
-│   │   ├── default_loss.png
-│   │   ├── describe-cat.png
-│   │   ├── describe-continuos2.png
-│   │   ├── describe-continuos.png
-│   │   ├── distribuicao.png
-│   │   ├── linear_regression-1.png
-│   │   ├── linear_regression-2.png
-│   │   ├── log_loss.png
-│   │   ├── mae.png
-│   │   ├── PCA.png
-│   │   ├── random_forest-1.png
-│   │   ├── random_forest-2.png
-│   │   ├── random_forest-3.png
-│   │   ├── test_data.png
-│   │   ├── train_data.png
-│   │   ├── xgboost-1.png
-│   │   ├── xgboost-2.png
-│   │   └── xgboost-3.png
-│   ├── machine-learning-capstone.md.ipynb
-│   ├── proposta.pdf
-│   └── relatorio_machine-learning-capstone.pdf
-├── requirements.txt
-└── src
-    ├── environment
-    │   ├── config_environment.txt
-    │   ├── create_requirements.sh
-    │   ├── create_virtual_env.sh
-    │   ├── __init__.py
-    │   ├── makefile
-    │   ├── prepare_env.py
-    │   ├── README.md
-    │   ├── show_config_environment.sh
-    │   ├── show_struture_project.sh
-    │   ├── struture_project.txt
-    │   ├── test_environment.py
-    │   └── virtualenv_requirements.txt
-    ├── __init__.py
-    └── notebook_config.ini
-
-10 directories, 47 files
-```
+## Datasource
+The datasource is: https://www.kaggle.com/c/allstate-claims-severity/data
 
 ## Algoritms
 - Linear Regression
 - Random Forest Regressor
 - XGBoost
 
-## Requirements
+## Quickstart
+1. [Data Exploration and Data Cleaning](notebooks/)
+2. [Data Exploration](notebooks/)
 
-- Python 3.7.1 or more
+## Struture this Project
+```
+.
+├── data
+│   ├── cleansing
+│   │   ├── test.csv
+│   │   └── train.csv
+│   ├── raw
+│   │   ├── sample_submission.csv
+│   │   ├── test.csv
+│   │   └── train.csv
+│   └── submissions-kaggle
+│       ├── lin_regression_submission.csv
+│       ├── random_forest_submission.csv
+│       └── xgb_submission.csv
+├── LICENSE
+├── notebooks
+│   ├── 1-data-exploration-and-data-cleaning.ipynb
+│   └── 2-algoritm-selection-and-tranning-model.ipynb
+├── README.md
+├── references
+│   └── images
+│       └── allstate.jpg
+├── reports
+│   ├── capstone-proposal.md
+│   ├── images
+│   │   ├── corr_cont_types_13_ate_14.png
+│   │   ├── corr_cont_types_1_ate_4.png
+│   │   ├── corr_cont_types_5_ate_8.png
+│   │   ├── corr_cont_types_all.png
+│   │   ├── corr_matrix_cont.png
+│   │   ├── default_loss.png
+│   │   ├── describe-cat.png
+│   │   ├── describe-continuos2.png
+│   │   ├── describe-continuos.png
+│   │   ├── distribuicao.png
+│   │   ├── linear_regression-1.png
+│   │   ├── linear_regression-2.png
+│   │   ├── log_loss.png
+│   │   ├── mae.png
+│   │   ├── PCA.png
+│   │   ├── random_forest-1.png
+│   │   ├── random_forest-2.png
+│   │   ├── random_forest-3.png
+│   │   ├── test_data.png
+│   │   ├── train_data.png
+│   │   ├── xgboost-1.png
+│   │   ├── xgboost-2.png
+│   │   └── xgboost-3.png
+│   ├── machine-learning-capstone.md.ipynb
+│   ├── proposta.pdf
+│   └── relatorio_machine-learning-capstone.pdf
+└── src
+    ├── environment
+    │   ├── config_environment.txt
+    │   ├── container
+    │   │   └── Dockerfile
+    │   ├── create_requirements.sh
+    │   ├── create_virtual_env.sh
+    │   ├── __init__.py
+    │   ├── jupyter_notebook_config.py
+    │   ├── makefile
+    │   ├── prepare_env.py
+    │   ├── README.md
+    │   ├── requirements.txt
+    │   ├── show_config_environment.sh
+    │   ├── show_struture_project.sh
+    │   ├── struture_project.txt
+    │   ├── test_environment.py
+    │   ├── venv
+    │   └── virtualenv_requirements.txt
+    ├── __init__.py
+    └── visualization
+        ├── hidden_code.js
+        └── visuals.py
+
+14 directories, 58 files
+```
+
+## Requirements
+- Python 3.7.3 or more
 ```sh
-sudo apt install python3.7
+sudo apt-get install Python3.7.3
 ```
 
 - pip
-```sh
-sudo apt install python-pip
+```
+sudo apt-get install python3-pip
 ```
 
-- Libraries<br/>
+- Python Virtual Environment
 ```sh
-pip3 install -r requirements.txt            # libs necessary in notebooks
+pip3 install --user virtualenv==16.6.0
 ```
 
+- Git
+```sh
+sudo apt-get install git
+```
 
 ## Running
-- [Running in Virtual Env Python (semi-isolated Environment)](#running-in-virtual-env-python)
-- [Running in Container (isolated envinment)](#running-in-container)
-
-#### Running in Virtual Env Python
-
-##### If machine not contains Python and yours dependencies
-1. Install Python Dependencies, Delete all compiled Python files, Test python environment
-
-```shell script
-sudo make
-
-# Available rules:
-
-# clean               Delete all compiled Python files
-# lint                Lint using flake8
-# requirements        Install Python Dependencies
-# test_environment    Test python environment is setup correctly
+1. Clone this repository
+```sh
+git clone https://github.com/brunocampos01/challenge-keyrus
+cd challenge-keyrus
 ```
 
-```shell script
-make requirements
-make test_environment
-make clean
-```
+2. Choose which environment to running
+ - [local](src/environment/README.md)
+ - [virtual environment](src/environment/README.md)
+ - [container](src/environment/README.md)
 
-2. Create virtual environment
+3. In terminal running command `jupyter-notebook` and navigate in this repository: `challenge-keyrus/notebooks`
 
-```shell script
-bash src/environment/create_virtual_env.sh
-```
-
-3. Activate this semi-isolated environment
-
-```shell script
-source src/environment/venv/bin/activate
-```
-
-4. Install the libraries
-
-```shell script
-pip3 install -r virtualenv_requirements.txt # libs necessary to prepare virtual environment
-pip3 install -r requirements.txt            # libs necessary in notebooks
-```
+##### NOTES
+- All the development was done using **virtualenv**. 
+- To learn more about the environment that has been developed, access the file [config_environment.txt](src/environment/config_environment.txt)
 
 ---
 

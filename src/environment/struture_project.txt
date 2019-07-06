@@ -13,8 +13,8 @@
 │       └── xgb_submission.csv
 ├── LICENSE
 ├── notebooks
-│   ├── algoritm-selection-and-tranning-model.ipynb
-│   └── data-exploration-and-data-cleaning.ipynb
+│   ├── 1-data-exploration-and-data-cleaning.ipynb
+│   └── 2-algoritm-selection-and-tranning-model.ipynb
 ├── README.md
 ├── references
 │   └── images
@@ -51,9 +51,12 @@
 └── src
     ├── environment
     │   ├── config_environment.txt
+    │   ├── container
+    │   │   └── Dockerfile
     │   ├── create_requirements.sh
     │   ├── create_virtual_env.sh
     │   ├── __init__.py
+    │   ├── jupyter_notebook_config.py
     │   ├── makefile
     │   ├── prepare_env.py
     │   ├── README.md
@@ -62,10 +65,11 @@
     │   ├── show_struture_project.sh
     │   ├── struture_project.txt
     │   ├── test_environment.py
+    │   ├── venv
     │   └── virtualenv_requirements.txt
     ├── __init__.py
     └── visualization
         ├── hidden_code.js
         └── visuals.py
 
-12 directories, 56 files
+14 directories, 58 files

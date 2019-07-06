@@ -14,7 +14,7 @@ def check_python_version(python_req: str):
         required_major = 3
     else:
         raise ValueError("Unrecognized python interpreter: {}"
-                        .format(python_req))
+                         .format(python_req))
 
     if system_major != required_major:
         raise TypeError("This project requires Python {}. Found: Python {}"
