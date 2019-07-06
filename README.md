@@ -8,7 +8,7 @@
 ## Objective
 The objective is use supervised learning technical for understend how severe is an insurance claim.
 
-## Documenatation
+## Documentation
 - [Capstone proposal](reports/)
 - [Report this project](reports/)
 
