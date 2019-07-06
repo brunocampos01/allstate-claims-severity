@@ -22,7 +22,7 @@ The datasource is: https://www.kaggle.com/c/allstate-claims-severity/data
 
 ## Quickstart
 1. [Data Exploration and Data Cleaning](notebooks/)
-2. [Data Exploration](notebooks/)
+2. [Modeling and Evaluation](notebooks/)
 
 ## Struture this Project
 ```
