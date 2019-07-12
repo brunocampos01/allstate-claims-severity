@@ -20,7 +20,6 @@
 │   └── images
 │       └── allstate.jpg
 ├── reports
-│   ├── capstone-proposal.md
 │   ├── images
 │   │   ├── corr_cont_types_13_ate_14.png
 │   │   ├── corr_cont_types_1_ate_4.png
@@ -47,6 +46,7 @@
 │   │   └── xgboost-3.png
 │   ├── machine-learning-capstone.md.ipynb
 │   ├── proposta.pdf
+│   ├── README.md
 │   └── relatorio_machine-learning-capstone.pdf
 └── src
     ├── environment
@@ -67,9 +67,6 @@
     │   ├── test_environment.py
     │   ├── venv
     │   └── virtualenv_requirements.txt
-    ├── __init__.py
-    └── visualization
-        ├── hidden_code.js
-        └── visuals.py
+    └── __init__.py
 
-14 directories, 58 files
+13 directories, 56 files

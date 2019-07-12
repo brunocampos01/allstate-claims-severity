@@ -1,10 +1,3 @@
-from jupyter_core.paths import jupyter_data_dir
-import subprocess
-import os
-import stat
-
-c = get_config()
-
 c.NotebookApp.ip = '0.0.0.0'
 
 # The port the notebook server will listen on
