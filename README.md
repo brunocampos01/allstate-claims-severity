@@ -1,6 +1,6 @@
 # Capstone Proposal - Allstate Claims Severity
 ![Python 3.6](https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue.svg)
-![License](https://img.shields.io/badge/Code%20License-MIT-green.svg)
+![License](https://img.shields.io/badge/Code%20License-MIT-blue.svg)
 
 ## Describe project
  This project is my Capstone in course Udacity Machine Learning Engineer Nanodegree.
