@@ -1,4 +1,4 @@
-# Capstone Proposal - Allstate Claims Severity
+# Capstone Proposal - Allstate: Claims Severity
 ![Python 3](https://img.shields.io/badge/Python-3-blue.svg)
 ![License](https://img.shields.io/badge/Code%20License-MIT-blue.svg)
 
