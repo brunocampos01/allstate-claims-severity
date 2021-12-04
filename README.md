@@ -13,7 +13,7 @@ The objective is use supervised learning technical for understend how severe is 
 - [Report this project](reports/)
 
 ## Datasource
-The datasource is: https://www.kaggle.com/c/allstate-claims-severity/data
+- [Kaggle: allstate claims severity](https://www.kaggle.com/c/allstate-claims-severity/data)
 
 ## Algorithms
 - Linear Regression
