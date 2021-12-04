@@ -15,7 +15,7 @@ The objective is use supervised learning technical for understend how severe is 
 ## Datasource
 The datasource is: https://www.kaggle.com/c/allstate-claims-severity/data
 
-## Algoritms
+## Algorithms
 - Linear Regression
 - Random Forest Regressor
 - XGBoost
