@@ -1,4 +1,4 @@
-# Capstone Proposal - Allstate: How severe is an insurance claim?
+# Allstate: How severe is an insurance claim?
 ![Python 3](https://img.shields.io/badge/Python-3-blue.svg)
 ![License](https://img.shields.io/badge/Code%20License-MIT-blue.svg)
 
