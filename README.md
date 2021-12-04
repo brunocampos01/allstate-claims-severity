@@ -2,6 +2,9 @@
 ![Python 3](https://img.shields.io/badge/Python-3-blue.svg)
 ![License](https://img.shields.io/badge/Code%20License-MIT-blue.svg)
 
+<img src="references/images/allstate.jpg" align="right" height=auto width=30%/>
+
+
 ## Describe Project
 It is my capstone in Udacity Machine Learning Engineer Nanodegree course.
 
