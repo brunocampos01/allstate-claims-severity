@@ -34,7 +34,12 @@ This project is tested with:
 |----------------|----------|
 | Python         | 3.6.8    |
 | Pip            | 21.2.4   |
-| Git            | 2.25.1   |
+
+
+#### Install Libraries
+```
+pip install --require-hashes -r requirements.txt
+```
 
 ---
 
