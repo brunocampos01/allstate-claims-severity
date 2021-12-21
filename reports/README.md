@@ -49,7 +49,7 @@ Os modelos testados serão:
 - XGBoost
 - Random Forest (Bagging)
 
-### Modelo de Referência (benchmark)
+### Benchmark
 A fonte de dados é provinda de uma competição do Kaggle, então o modelo de referência será escolhido como a melhor pontuação da competição para o conjunto de teste, que aparece em 1109.70772 erro médio absoluto (menor é melhor).<br/>
 Seŕa testado e executado os modelos de regressão linear, XGBoost e Random Forest (Bagging) no conjunto de testes fornecido nesta competição do Kaggle. O arquivo de submissão será enviado ao site do kaggle para verificar a pontuação. Então, também podemos comparar nosso modelo com o modelo de benchmark hospedado pela Kaggle.
 <br/>
