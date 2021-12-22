@@ -13,7 +13,6 @@ The objective is to use supervised learning technical for understand how severe 
 
 ## Documentation
 - [Capstone proposal](reports/)
-- [Report this project](reports/)
 
 ## Data Source
 - [Kaggle: allstate claims severity](https://www.kaggle.com/c/allstate-claims-severity/data)
