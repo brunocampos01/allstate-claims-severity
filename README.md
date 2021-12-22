@@ -12,10 +12,10 @@ It is my capstone in Udacity Machine Learning Engineer Nanodegree course.
 The objective is to use supervised learning technical for understand how severe is an insurance claim.
 
 ## Documentation
-- [Capstone proposal](reports/)
+[Capstone proposal](reports/)
 
 ## Data Source
-- [Kaggle: allstate claims severity](https://www.kaggle.com/c/allstate-claims-severity/data)
+[Kaggle: allstate claims severity](https://www.kaggle.com/c/allstate-claims-severity/data)
 
 ## Algorithms
 - Linear Regression
