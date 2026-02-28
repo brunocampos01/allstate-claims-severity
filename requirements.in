@@ -1,0 +1,32 @@
+# Direct dependencies — used by pip-compile to generate requirements.txt
+# To regenerate the pinned file with hashes:
+#   pip install pip-tools
+#   pip-compile --generate-hashes requirements.in
+
+# Core data science
+numpy
+pandas
+scipy
+scikit-learn
+
+# Gradient boosting
+xgboost
+lightgbm
+
+# Model persistence
+joblib
+
+# Visualisation
+matplotlib
+seaborn
+Pillow
+
+# Jupyter
+jupyter
+jupyterlab
+ipykernel
+ipython
+
+# Dev tooling
+pip-tools
+pipreqs
